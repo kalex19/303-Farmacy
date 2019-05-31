@@ -1,6 +1,8 @@
+@import './normalize.scss';
+@import './App.scss';
+@import './variables.scss';
+
 body {
   margin: 0;
-  font-family: 'Rock Salt', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
