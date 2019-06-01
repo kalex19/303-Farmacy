@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
+import { getFlavorReducer } from './getDataReducer';
+import { getEffectsReducer } from './getDataReducer';
+import { getRaceReducer } from './getDataReducer';
 
-const rootReducer = combineReducers => {};
-
-export default rootReducer;
+export const rootReducer = combineReducers({
+	getFlavorReducer,
+	getEffectsReducer,
+	getRaceReducer
+});

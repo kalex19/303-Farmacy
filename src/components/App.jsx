@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Controls from '../containers/Controls';
-import CardContainer from '../containers/Controls';
 import '../styles/App.scss';
 
 export class App extends Component {
@@ -8,10 +7,11 @@ export class App extends Component {
 		return (
 			<div className="app">
 				<h1>303 Farmacy</h1>
-				<i class="fas fa-search" />
-				<input type="text" className="searchBar" placeholder="Search..." name="search" />
+				<div className="searchBarContainer">
+					<i class="fas fa-search" />
+					<input type="text" className="searchBar" placeholder="Search..." name="search" maxlength="25" />
+				</div>
 				<Controls />
-				<CardContainer />
 			</div>
 		);
 	}
