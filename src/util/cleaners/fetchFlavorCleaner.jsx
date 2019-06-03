@@ -1,5 +1,5 @@
-// export const fetchFlavorCleaner = (flavor) => {
-//   return popular.map(movie => {
-//     return {...movie, type: 'popular'}
-//   })
-// }
+export const fetchFlavorCleaner = flavors => {
+	return flavors.map(flavor => {
+		return { ...flavor, type: 'flavor' };
+	});
+};

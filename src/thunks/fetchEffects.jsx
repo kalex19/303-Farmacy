@@ -1,20 +1,15 @@
-// import { isLoading, getPopular, hasErrored } from '../actions';
-// import {fetchPopularCleaner} from '../Util/Cleaners/fetchPopularCleaner';
+import { fetchEffectsCleaner } from '../util/cleaners/fetchFlavorCleaner';
+import { getEffects } from '../actions';
+import { setError } from '../actions';
 
-// export const fetchPopular = url => {
-// 	return async dispatch => {
-// 			try {
-// 			dispatch(isLoading(true));
-// 			const response = await fetch(url);
-// 			if (!response.ok) {
-// 				throw Error(response.statusText);
-// 			}
-// 			const data = await response.json();
-// 			const popularList = data.results;
-// 			const popular = fetchPopularCleaner(popularList)
-// 			return Promise.all(popular)
-// 		} catch (error) {
-// 			dispatch(hasErrored(error.message));
-// 		}
-// 	};
-// };
+export const fetchEffects = url => {
+	return async dispatch => {
+		try {
+			const data = await fetchEffects(url);
+			dispatch(getEffects(data));
+			return data;
+		} catch (error) {
+			dispatch(setError(error.message));
+		}
+	};
+};

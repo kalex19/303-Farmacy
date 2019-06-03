@@ -1,10 +1,16 @@
 import { combineReducers } from 'redux';
-import { getFlavorReducer } from './getDataReducer';
-import { getEffectsReducer } from './getDataReducer';
-import { getRaceReducer } from './getDataReducer';
+import { getFlavorReducer } from './getFlavorReducer';
+import { getEffectsReducer } from './getEffectsReducer';
+import { getRaceReducer } from './getRaceReducer';
+import { toggleFavReducer } from './toggleFavReducer';
+import { isLoadingReducer } from './isLoadingReducer';
+import { setErrorReducer } from './setErrorReducer';
 
-export const rootReducer = combineReducers({
+export default combineReducers({
 	getFlavorReducer,
 	getEffectsReducer,
-	getRaceReducer
+	getRaceReducer,
+	toggleFavReducer,
+	isLoadingReducer,
+	setErrorReducer
 });

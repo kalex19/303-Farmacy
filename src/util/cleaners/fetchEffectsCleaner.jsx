@@ -1,5 +1,5 @@
-// export const fetchEffectsCleaner = (effects) => {
-//   return popular.map(movie => {
-//     return {...movie, type: 'popular'}
-//   })
-// }
+export const fetchEffectsCleaner = effects => {
+	return effects.map(effect => {
+		return { ...effect, type: 'effect' };
+	});
+};
